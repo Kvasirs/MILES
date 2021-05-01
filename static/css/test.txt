@@ -1,0 +1,10 @@
+<p id="tweak_msg">
+            When attempting to understand the meaning of words within a message, the AI pays more attention
+            to certain surrounding words than others — similar to what us humans do! One way in which we can "distract"
+            the AI during this process is by diverting its attention either towards to away from other words within the message.
+            <br><br>
+            For example, take the sentence "The purple fox was a weird colour". When attempting to understand the meaning of the word
+            "colour" within the sentence, the AI may direct most of its attention towards the word "purple". However, we might want the
+            AI to pay more attention to the word "weird" instead, so that it gains a different understanding of the word "colour", and
+            ultimately generates a different response for us.
+          </p>

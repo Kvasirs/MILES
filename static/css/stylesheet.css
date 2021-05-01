@@ -1,0 +1,101 @@
+#selected_words {
+  height: 35vh !important;
+  overflow-y: scroll;
+}
+
+.icons {
+	margin-right: 3px;
+}
+
+#distract_title {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#distract_box {
+	margin-bottom: 16px;
+}
+
+#distract_value {
+	float: right;
+}
+
+#t_icon {
+	position: relative;
+	top: -1px;
+	left: 0px;
+	margin-right: 8px;
+}
+
+#sub_icon {
+	margin-left: 3px;
+}
+
+#tweak_msg {
+	text-align: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.box_titles {
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 30px;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	height:100%;
+}
+
+.interface_box {
+	text-align: left;
+	margin-top: 10px;
+	padding: 10px;
+	background-color: white !important;
+	border-radius: 5px;
+	overflow-y: scroll;
+	height: 35vh !important;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #C0C0C0;
+}::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow:none !important;
+  border:1px solid #C0C0C0;;
+}
+
+
+#submit_button {
+	margin-top:30px;
+	float: right;
+}
+
+#tweak_button {
+	margin-top:30px;
+	float: right;
+}
+	
+@media screen and (max-width: 1200px) {
+	#tweak_button {
+		margin-bottom: 15px;
+	}
+}
+
+
+#task_dropdown {
+	margin-top:30px;
+	float: left;
+}
+
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text);
+	color: grey;
+}
