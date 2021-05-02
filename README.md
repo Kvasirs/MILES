@@ -24,8 +24,6 @@ MILES is a multilingual text simplifier inspired by LSBert - A lexical simplific
 
 MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish, Dutch, English, Finnish, French, German, Hungarian, Indonesian, Italian, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukranian. 
 
-<br>
-
 <img src="images/MILES_flowchart.png" alt="flowchart" width="800">
 
 ### Prerequisites
