@@ -52,24 +52,32 @@ It is recommended that fastText embeddings are downloaded for your target langua
 python simplifier/embeddings/gen_keyed_vectors.py en
 ```
 
-## Simplifying Text
+### Simplifying Text
 
-MILES simplifications can be done using either a simple Flask app provided or the command line. To start using the Flask app, run app.py and open 127.0.0.1 in your web browser. If you would prefer to use the command line, there are a couple of options available:
+MILES simplifications can be done using either a simple Flask app provided or the command line. To start using the Flask app, run app.py and open 127.0.0.1 in your web browser:
 
-1. Simplifying text files:
 ```sh
-python simplify.py --file <text_file>
+python app.py -l <ISO 639-1 code>
 ```
+
+If you would prefer to use the command line, there are a couple of options available:
 
 2. Simplifying sentences:
 ```sh
-python simplify.py --text <sentence>
+python simplify.py -t <sentence> -l <ISO 639-1 code>
 ```
+
+1. Simplifying text files:
+```sh
+python simplify.py -f <text_file> -l <ISO 639-1 code>
+```
+
+Note: The default language is English. This can be changed in simplifier/config.py.
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://https://github.com/Chrono4/NovoLS/issues) for a list of proposed features (and known issues).
+See the [open issues](https://https://github.com/Kvasirs/MILES/issues) for a list of proposed features (and known issues).
 
 <!-- CONTACT -->
 ## Contact
@@ -79,4 +87,4 @@ If you have any questions or concerns, message me on [LinkedIn](https://www.link
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-Shout out to Prof. Dr. Goran Glavaš for answering questions I had about the project. My dissertation would not have been what it was without his help. For those interested, a minimal version of Prof. Glavaš and Štajner's LightLS system can be found [here](https://github.com/codogogo/lightls)
+Shout out to Prof. Dr. Goran Glavaš for answering questions I had about the lexical simplification. For those interested, a minimal version of Prof. Glavaš and Štajner's own lexical simplification system can be found [here](https://github.com/codogogo/lightls)
