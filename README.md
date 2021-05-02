@@ -54,20 +54,27 @@ python simplifier/embeddings/gen_keyed_vectors.py en
 
 ## Usage
 
-MILES simplifications can be done using either a simple Flask app provided or the command line. To start using the Flask app, run app.py and open 127.0.0.1 in your web browser:
+### Flask App
 
+MILES simplifications can be done using either a simple Flask app provided or the command line. To start using the Flask app, run app.py with ISO 639-1 language code:
 ```sh
 python app.py -l <ISO 639-1 code>
 ```
 
+Once running Open 127.0.0.1 in your browser and start simplifying!
+
+<img src="images/web_app.jpg" alt="flask app">
+
+### Command Line
+
 If you would prefer to use the command line, there are a couple of options available:
 
-2. Simplifying sentences:
+1. Simplifying sentences:
 ```sh
 python simplify.py -t <sentence> -l <ISO 639-1 code>
 ```
 
-1. Simplifying text files:
+2. Simplifying text files:
 ```sh
 python simplify.py -f <text_file> -l <ISO 639-1 code>
 ```
