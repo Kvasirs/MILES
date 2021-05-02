@@ -8,6 +8,8 @@ import json
 import time
 import os
 import io
+import sys
+import getopt
 
 from simplifier import simplifier
 from simplifier import models
@@ -43,7 +45,24 @@ def ai_request():
 
 if __name__ == "__main__":
 
-    models.embeddings = models.load_embeddings(config.lang)
+    if len(sys.argv) > 1:
+        
+        argv = sys.argv[1:]
+
+        try:
+            opts, args = getopt.getopt(argv, "l:")
+        except:
+            print("Error!")
+
+        # Get language if passed.
+        for opt, arg in opts:
+            if opt in ['-l', '--language']:
+                config.lang = arg
+
+        # Check if language is supported and attempt to load embeddings.
+        if config.lang in config.supported_langs:
+            models.embeddings = models.load_embeddings(config.lang)
+
     http_server = WSGIServer(('0.0.0.0', 80), app)    
     print("Loaded as HTTP Server on port 80, running forever:")
     http_server.serve_forever()
