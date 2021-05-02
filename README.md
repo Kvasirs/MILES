@@ -28,8 +28,6 @@ MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish
 
 <img src="images/MILES_flowchart.png" alt="flowchart" width="800">
 
-<br>
-
 ### Prerequisites
 
 * [Huggingface Transformers](https://huggingface.co/transformers/)
