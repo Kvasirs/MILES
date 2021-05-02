@@ -24,34 +24,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-MILES is a multilingual text simplifier inspired by LSBert - A lexical simplification approach proposed by Qiang et al. in 2018. Unlike LSBert, MiLeS makes use of the bert-base-multilingual-uncased model, as well as language-agnostic approaches to complex word identification (CWI) and candidate ranking.
+MILES is a multilingual text simplifier inspired by LSBert - A lexical simplification approach proposed by Qiang et al. in 2018. Unlike LSBert, MILES makes use of the bert-base-multilingual-uncased model, as well as language-agnostic approaches to complex word identification (CWI) and candidate ranking.
 
-### Language Support
-
-MILES currently supports 22 languages:
-
-* Arabic
-* Bulgarian
-* Catalan
-* Czech
-* Danish
-* Dutch
-* English
-* Finnish
-* French
-* German
-* Hungarian
-* Indonesian
-* Italian
-* Norwegian
-* Polish
-* Portuguese
-* Romanian
-* Russian
-* Spanish
-* Swedish
-* Turkish
-* Ukranian
+MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish, Dutch, English, Finnish, French, German, Hungarian, Indonesian, Italian, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukranian. 
 
 ### Prerequisites
 
@@ -77,23 +52,19 @@ It is recommended that fastText embeddings are downloaded for your target langua
 python simplifier/embeddings/gen_keyed_vectors.py en
 ```
 
-### Simplifying Text
+## Simplifying Text
 
-MILES simplifications can be be done either via the command line or a simple flask app. 
+MILES simplifications can be done using either a simple Flask app provided or the command line. To start using the Flask app, run app.py and open 127.0.0.1 in your web browser. If you would prefer to use the command line, there are a couple of options available:
 
-To start simplifying using the command line:
+1. Simplifying text files:
 ```sh
-python simplifier.py
+python simplify.py --file <text_file>
 ```
 
-To start simplifying using the Flask app:
-
-1. Run app.py
+2. Simplifying sentences:
 ```sh
-python app.py
+python simplify.py --text <sentence>
 ```
-
-2. Open your browser and go to 127.0.0.1
 
 <!-- ROADMAP -->
 ## Roadmap
