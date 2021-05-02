@@ -5,28 +5,57 @@
     <img src="images/novols.jpg" alt="Logo" width="216" height="121">
   </a>
 
-  <h3 align="center">NovoLS</h3>
+  <h3 align="center">MILES</h3>
 
   <p align="center">
-    An unsupervised text simplification system.
+    MultIlingual LExical Simplifier
     <br />
-    <a href="https://github.com/Chrono4/NovoLS"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Kvasirs/MILES"><inspectistrong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.academia.edu/43532843/NovoLS_A_Lexical_Text_Simplification_Web_Service?source=swp_share">Read Thesis</a>
+    <a href="https://arxiv.org/abs/2006.14939">Read LSBert Paper</a>
     ·
-    <a href="https://github.com/Chrono4/NovoLS/issues">Report Bug</a>
+    <a href="https://github.com/Kvasirs/MILES/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Chrono4/NovoLS/issues">Request Feature</a>
+    <a href="https://github.com/Kvasirs/MILES/issues">Request Feature</a>
   </p>
 </p>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-NovoLS is a lexical text simplification system which I constructed as part of my dissertation project. It is largely insipired by LightLS — an older lexcial text simplifier proposed by Prof. Dr. Goran Glavaš and Dr. Sanja Štajner in 2015. Both NovoLS and LightLS make use of GloVe word embeddings to find ‬simplification candidates for complex words, which are then ranked on a number of different features. My thesis can be found [here](https://www.academia.edu/43532843/NovoLS_A_Lexical_Text_Simplification_Web_Service?source=swp_share).
+MILES is a multilingual text simplifier inspired by LSBert - A lexical simplification approach proposed by Qiang et al. in 2018. Unlike LSBert, MiLeS makes use of the bert-base-multilingual-uncased model, as well as language-agnostic approaches to complex word identification (CWI) and candidate ranking.
+
+### Language Support
+
+MILES currently supports 22 languages:
+
+* Arabic
+* Bulgarian
+* Catalan
+* Czech
+* Danish
+* Dutch
+* English
+* Finnish
+* French
+* German
+* Hungarian
+* Indonesian
+* Italian
+* Norwegian
+* Polish
+* Portuguese
+* Romanian
+* Russian
+* Spanish
+* Swedish
+* Turkish
+* Ukranian
 
 ### Prerequisites
+
+* [Hugginface Transformers](https://huggingface.co/transformers/)
 
 * [Gensim](https://radimrehurek.com/gensim/)
 
@@ -34,8 +63,11 @@ NovoLS is a lexical text simplification system which I constructed as part of my
 
 * [Wordfreq](https://pypi.org/project/wordfreq/)
 
-* [Wikipedia 2014 + Gigaword 5 GloVe Embeddings](https://nlp.stanford.edu/projects/glove/)
-<br><b>Note - </b> After downloading glove.6B.zip, we used the 300d embeddings, however, any of the packaged embeddings can be used.
+* [Stop Words](https://pypi.org/project/stop-words/)
+
+* [PyTorch](https://pytorch.org/)
+
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
 ### Installation
 
