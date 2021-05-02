@@ -1,9 +1,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Kvasirs/MILES">
-    <img src="images/novols.jpg" alt="Logo" width="216" height="121">
-  </a>
 
   <h3 align="center">MILES</h3>
 
@@ -60,9 +57,9 @@ MILES simplifications can be done using either a simple Flask app provided or th
 ```sh
 python app.py -l <ISO 639-1 code>
 ```
-<br>
-Once running, open 127.0.0.1 in your browser and start simplifying!
-<br>
+
+Once running, open 127.0.0.1 in your browser and start simplifying!  
+
 <img src="images/web_app.png" alt="flask app">
 
 ### Command Line
