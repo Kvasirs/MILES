@@ -39,7 +39,7 @@ def generate_candidates(tokens, index, topn=config.candidate_num):
     # Get predictions and return ordered.
     predicted_ids = torch.argsort(predictions, descending=True)[:config.candidate_num]
     predicted_tokens = tokenizer.convert_ids_to_tokens(list(predicted_ids))
-    
+
     return predicted_tokens
 
 def suitable_complex_word(w):
