@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Chrono4/NovoLS">
+  <a href="https://github.com/Kvasirs/MILES">
     <img src="images/novols.jpg" alt="Logo" width="216" height="121">
   </a>
 
@@ -69,21 +69,31 @@ MILES currently supports 22 languages:
 
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
-Although not strictly required, it is strongly recommended that fastText embeddings are downloaded for your target language/s. These will automatically be used by MILES to make more accurate simplifications. To download and install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html), before running the key vector generation script.
+### FastText Embeddings
+
+It is recommended that fastText embeddings are downloaded for your target language/s. These will be used by MILES to make notably more accurate simplifications. To install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html), before running the key vector generation script with the ISO 639-1 code for the selected language. Ensure that the .vec file is in simplifier/embeddings beforehand.
 
 ```sh
-python gen_keyed_vectors.py en
+python simplifier/embeddings/gen_keyed_vectors.py en
 ```
 
-### Usage
+### Simplifying Text
 
-MILES can be used either via the command line or a simple flask app. To use the command line, simply
+MILES simplifications can be be done either via the command line or a simple flask app. 
 
-1. Method 1: Run simplify.py in main directory.
+To start simplifying using the command line:
 ```sh
 python simplifier.py
 ```
-2. Method 2: 
+
+To start simplifying using the Flask app:
+
+1. Run app.py
+```sh
+python app.py
+```
+
+2. Open your browser and go to 127.0.0.1
 
 <!-- ROADMAP -->
 ## Roadmap
