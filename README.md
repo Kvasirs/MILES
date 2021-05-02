@@ -49,7 +49,7 @@ MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish
 It is recommended that fastText embeddings are downloaded for your target language/s. These will be used by MILES to make notably more accurate simplifications. To install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html), before running the key vector generation script with the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the selected language. Ensure that the .vec file is in simplifier/embeddings beforehand.
 
 ```sh
-python simplifier/embeddings/gen_keyed_vectors.py en
+python simplifier/embeddings/gen_keyed_vectors.py <ISO 639-1 code>
 ```  
 
 ## Usage
@@ -60,9 +60,9 @@ MILES simplifications can be done using either a simple Flask app provided or th
 ```sh
 python app.py -l <ISO 639-1 code>
 ```
-
-Once running Open 127.0.0.1 in your browser and start simplifying!
-
+<br>
+Once running, open 127.0.0.1 in your browser and start simplifying!
+<br>
 <img src="images/web_app.png" alt="flask app">
 
 ### Command Line
@@ -70,16 +70,16 @@ Once running Open 127.0.0.1 in your browser and start simplifying!
 If you would prefer to use the command line, there are a couple of options available:
 
 1. Simplifying sentences:
-```sh
-python simplify.py -t <sentence> -l <ISO 639-1 code>
-```
+    ```sh
+    python simplify.py -t <sentence> -l <ISO 639-1 code>
+    ```
 
 2. Simplifying text files:
-```sh
-python simplify.py -f <text_file> -l <ISO 639-1 code>
-```
+    ```sh
+    python simplify.py -f <text_file> -l <ISO 639-1 code>
+    ```
 
-Note: The default language is English. This can be changed in simplifier/config.py.
+Note: If no language code is provided, text will be simplified assuming it's English. The default language can be changed in simplifier/config.py.
 
 <!-- ROADMAP -->
 ## Roadmap
