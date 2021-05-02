@@ -42,7 +42,7 @@ MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish
 
 #### FastText Embeddings
 
-It is recommended that fastText embeddings are downloaded for your target language/s. These will be used by MILES to make notably more accurate simplifications. To install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html), before running the key vector generation script with the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the selected language. Ensure that the .vec file is in simplifier/embeddings beforehand.
+It is recommended that fastText embeddings are downloaded for your target language/s. These will be used by MILES to make notably more accurate simplifications. To install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html). Once done, place the .vec file in simplifier/embeddings/ before running the key vector generation script with the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the selected language:
 
 ```sh
 python simplifier/embeddings/gen_keyed_vectors.py <ISO 639-1 code>
