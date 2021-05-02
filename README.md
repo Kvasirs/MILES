@@ -55,7 +55,7 @@ MILES currently supports 22 languages:
 
 ### Prerequisites
 
-* [Hugginface Transformers](https://huggingface.co/transformers/)
+* [Huggingface Transformers](https://huggingface.co/transformers/)
 
 * [Gensim](https://radimrehurek.com/gensim/)
 
@@ -69,22 +69,21 @@ MILES currently supports 22 languages:
 
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
-### Installation
+Although not strictly required, it is strongly recommended that fastText embeddings are downloaded for your target language/s. These will automatically be used by MILES to make more accurate simplifications. To download and install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html), before running the key vector generation script.
 
-1. Clone the repo
 ```sh
-git clone https://https://github.com/Chrono4/NovoLS.git
+python gen_keyed_vectors.py en
 ```
 
-2. Run generation script within resources/embeddings to generate vector model
-  ```sh
-  python gen_keyed_vectors.py <glove vector path>
-  ```
+### Usage
 
-3. Run simplifier.py
+MILES can be used either via the command line or a simple flask app. To use the command line, simply
+
+1. Method 1: Run simplify.py in main directory.
 ```sh
 python simplifier.py
 ```
+2. Method 2: 
 
 <!-- ROADMAP -->
 ## Roadmap
