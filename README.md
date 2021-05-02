@@ -63,7 +63,7 @@ python app.py -l <ISO 639-1 code>
 
 Once running Open 127.0.0.1 in your browser and start simplifying!
 
-<img src="images/web_app.jpg" alt="flask app">
+<img src="images/web_app.png" alt="flask app">
 
 ### Command Line
 
