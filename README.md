@@ -44,15 +44,15 @@ MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish
 
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
-### FastText Embeddings
+#### FastText Embeddings
 
-It is recommended that fastText embeddings are downloaded for your target language/s. These will be used by MILES to make notably more accurate simplifications. To install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html), before running the key vector generation script with the ISO 639-1 code for the selected language. Ensure that the .vec file is in simplifier/embeddings beforehand.
+It is recommended that fastText embeddings are downloaded for your target language/s. These will be used by MILES to make notably more accurate simplifications. To install fastText embeddings for MILES, download the .vec embeddings for you target language [here](https://fasttext.cc/docs/en/crawl-vectors.html), before running the key vector generation script with the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the selected language. Ensure that the .vec file is in simplifier/embeddings beforehand.
 
 ```sh
 python simplifier/embeddings/gen_keyed_vectors.py en
-```
+```  
 
-### Simplifying Text
+## Usage
 
 MILES simplifications can be done using either a simple Flask app provided or the command line. To start using the Flask app, run app.py and open 127.0.0.1 in your web browser:
 
@@ -83,8 +83,3 @@ See the [open issues](https://https://github.com/Kvasirs/MILES/issues) for a lis
 ## Contact
 
 If you have any questions or concerns, message me on [LinkedIn](https://www.linkedin.com/in/kane-miles-dev/) or email me at Kanemiles445@gmail.com.
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-Shout out to Prof. Dr. Goran Glavaš for answering questions I had about the lexical simplification. For those interested, a minimal version of Prof. Glavaš and Štajner's own lexical simplification system can be found [here](https://github.com/codogogo/lightls)
