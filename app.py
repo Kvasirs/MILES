@@ -59,9 +59,9 @@ if __name__ == "__main__":
             if opt in ['-l', '--language']:
                 config.lang = arg
 
-        # Check if language is supported and attempt to load embeddings.
-        if config.lang in config.supported_langs:
-            models.embeddings = models.load_embeddings(config.lang)
+    # Check if language is supported and attempt to load embeddings.
+    if config.lang in config.supported_langs:
+        models.embeddings = models.load_embeddings(config.lang)
 
     http_server = WSGIServer(('0.0.0.0', 80), app)    
     print("Loaded as HTTP Server on port 80, running forever:")
