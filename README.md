@@ -4,7 +4,7 @@
   <h3 align="center">MILES</h3>
 
   <p align="center">
-    MultIlingual LExical Simplifier
+    Multilingual Lexical Simplifier
     <br />
     <a href="https://github.com/Kvasirs/MILES"><inspectistrong>Explore the docs »</strong></a>
     <br />
@@ -20,9 +20,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-MILES is a multilingual text simplifier inspired by LSBert - A lexical simplification approach proposed by Qiang et al. in 2018. Unlike LSBert, MILES makes use of the bert-base-multilingual-uncased model, as well as simple language-agnostic approaches to complex word identification (CWI) and candidate ranking.
+MILES is a multilingual text simplifier inspired by LSBert - A BERT-based lexical simplification approach proposed in 2018. Unlike LSBert, MILES uses the bert-base-multilingual-uncased model, as well as simple language-agnostic approaches to complex word identification (CWI) and candidate ranking. MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish, Dutch, English, Finnish, French, German, Hungarian, Indonesian, Italian, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukrainian.
 
-MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish, Dutch, English, Finnish, French, German, Hungarian, Indonesian, Italian, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukranian.
+As a result of not using any language-specific resources (WordNets, POS taggers, parallel corpora, etc.), MILES does not always offer synonymous substitutions for complex words. Although almost always simpler than the original, selected substitutions may alter the meaning of the text. Please keep this in mind, and feel free to download and tailor it to a language of your choosing!
 
 ### Prerequisites
 
