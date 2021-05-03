@@ -15,8 +15,10 @@ embeddings = None
 logging.set_verbosity(logging.ERROR)
 
 # Load BERT model and tokenizer.
+print("\nLoading BERT model...")
 tokenizer = BertTokenizer.from_pretrained("bert-base-multilingual-uncased")
 model = BertForMaskedLM.from_pretrained("bert-base-multilingual-uncased")
+print("\nBERT model loaded!")
 
 # Create stemmer object.
 stemmer = PorterStemmer()
@@ -24,10 +26,11 @@ stemmer = PorterStemmer()
 def load_embeddings(language):
     """Load word embeddings for selected language."""
     try:
+        print("\nAttempting to load embeddings...")
         wv_path = "simplifier/embeddings/" + config.lang + ".kv"
         wv_model = KeyedVectors.load(wv_path, mmap='r')
-        print("Loaded embeddings!")
+        print("\nLoaded embeddings!")
     except FileNotFoundError:
-        print("No embeddings for " + config.lang + " found. Using without...")
+        print("\nNo embeddings for " + config.lang + " found. Using without...")
         wv_model = None
     return wv_model

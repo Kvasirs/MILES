@@ -13,7 +13,7 @@ if __name__ == '__main__':
         argv = sys.argv[1:]
 
         try:
-            opts, args = getopt.getopt(argv, "t:l:")
+            opts, args = getopt.getopt(argv, "t:f:l:")
         except:
             print("Error!")
 
@@ -39,8 +39,9 @@ if __name__ == '__main__':
             elif text:
                 original_text = text
 
+            print("\nSimplifying text...")
             simple_text = simplifier.simplify_text(original_text.rstrip("\n"))
-            print(simple_text)
+            print("\nOutput: " + simple_text)
             
         else:
             print("\nCannot simplify. Unsupported language entered.")

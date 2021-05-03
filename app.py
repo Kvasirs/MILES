@@ -33,13 +33,8 @@ def about():
 def ai_request():
     
     if request.method == 'POST':
-
         text = request.form.get('input')
-
-        print(text)
-
-        output = simplifier.simplify_text_html(text)
-
+        output = simplifier.simplify_text(text, bold_highlight=True)
         return jsonify({"output": output})
 
 
@@ -63,6 +58,7 @@ if __name__ == "__main__":
     if config.lang in config.supported_langs:
         models.embeddings = models.load_embeddings(config.lang)
 
+    print("\nStarting MILES Flask server...")
     http_server = WSGIServer(('0.0.0.0', 80), app)    
-    print("Loaded as HTTP Server on port 80, running forever:")
+    print("\nLoaded as HTTP Server on port 80, running forever:")
     http_server.serve_forever()

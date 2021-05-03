@@ -102,7 +102,7 @@ def simplify_token(tokens, i):
 
     return overall_ranked if overall_ranked else []
 
-def simplify_text_html(text):
+def simplify_text(text, bold_highlight=False):
     """Simplifies a given piece of text and returns
     text alongside simplified positions."""
     # Copy tokens to prevent change to original.
@@ -115,23 +115,12 @@ def simplify_text_html(text):
         # If token is complex, attempt to simplify.
         if suitable_complex_word(tokens_copy[i]):
             candidates = simplify_token(tokens_copy, i)
-            if candidates: tokens[i] = "<b>" + candidates[-1][0] + "</b>"
+            
+            if candidates:
+                if bold_highlight:
+                    tokens[i] = "<b>" + candidates[-1][0] + "</b>"
+                else:
+                    tokens[i] = candidates[-1][0]
+                    
 
     return TreebankWordDetokenizer().detokenize(tokens)
-
-def simplify_text(text):
-    """Simplifies a given piece of text."""
-    # Copy tokens to prevent change to original.
-    tokens = tokenize(text)
-    tokens_copy = tokens.copy()
-
-    # For each copied token
-    for i in range(len(tokens_copy)):
-        
-        # If token is complex, attempt to simplify.
-        if suitable_complex_word(tokens_copy[i]):
-            candidates = simplify_token(tokens_copy, i)
-            if candidates: tokens[i] = candidates[-1][0]
-
-    # Return detokenized.
-    return TreebankWordDetokenizer().detokenize(tokens)    
