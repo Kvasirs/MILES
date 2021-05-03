@@ -22,7 +22,7 @@
 
 MILES is a multilingual text simplifier inspired by LSBert - A BERT-based lexical simplification approach proposed in 2018. Unlike LSBert, MILES uses the bert-base-multilingual-uncased model, as well as simple language-agnostic approaches to complex word identification (CWI) and candidate ranking. MILES currently supports 22 languages: Arabic, Bulgarian, Catalan, Czech, Danish, Dutch, English, Finnish, French, German, Hungarian, Indonesian, Italian, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukrainian.
 
-As a result of not using any language-specific resources (WordNets, POS taggers, parallel corpora, etc.), MILES does not always offer synonymous substitutions for complex words. Although almost always simpler than the original, selected substitutions may alter the meaning of the text. Please keep this in mind, and feel free to download and tailor it to a language of your choosing!
+As a result of not using any language-specific resources (WordNets, POS taggers, parallel corpora, etc.), MILES does not always offer synonymous substitutions for complex words. Although almost always simpler than the original, selected substitutions may alter the meaning of the text. Please keep this in mind, and feel free to download and tailor MILES to a language of your choosing!
 
 ### Prerequisites
 
